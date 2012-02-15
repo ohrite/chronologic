@@ -2,15 +2,15 @@ require 'boilerplate'
 
 connection = Chronologic::Client::Connection.new('http://localhost:7979')
 
-event = Chronologic::Event.new
+event = Chronologic::Client::Event.new
 event.key = "story_1"
-event.timestamp = Time.now.utc
 event.data = {
   "headline" => "First ever post in Chronologic!",
   "lede" => "A monumental occasion for housecats everywhere.",
   "body" => "There is currently a cat perched on my arm. This is normal, carry on!"
 }
 event.timelines = ['home']
+event.objects = []
 
 connection.publish(event)
 
