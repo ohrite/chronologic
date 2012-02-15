@@ -30,6 +30,11 @@ An example goes here.
 
 ## Running Chronologic
 
+Getting Chronologic up and running on your local OSX box:
+
+    $ brew install cassandra
+    $ cassandra-cli -h localhost -f chronologic_test.schema
+
 Instructions on running Chronologic and idea about deploying it go here.
 
 ## Contributing
