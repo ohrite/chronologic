@@ -1,0 +1,19 @@
+create keyspace ChronologicTest
+    with placement_strategy = 'org.apache.cassandra.locator.SimpleStrategy'
+    and strategy_options = {replication_factor:1};
+
+use ChronologicTest;
+
+create column family Object
+    with comparator = UTF8Type;
+
+create column family Subscription
+    with comparator = UTF8Type;
+
+create column family Timeline
+    with comparator = UTF8Type;
+
+create column family Event
+    with column_type = Super
+    and comparator = UTF8Type
+    and subcomparator = UTF8Type;
