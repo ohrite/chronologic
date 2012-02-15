@@ -2,6 +2,8 @@ source :rubygems
 
 gemspec
 
+gem "cassandra", :git => "git://github.com/twitter/cassandra.git"
+
 group :development do
   gem 'perftools.rb'
   gem 'unicorn'
